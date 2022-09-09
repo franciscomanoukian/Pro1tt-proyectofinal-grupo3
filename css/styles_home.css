@@ -1,3 +1,56 @@
 body{
     background-color: brown;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.luchito{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.luchito_2{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wawa{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wawa_2{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.manuka{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.manuka2{
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
