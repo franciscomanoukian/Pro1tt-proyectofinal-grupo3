@@ -1,0 +1,21 @@
+body{
+    width: 100vw;
+    margin: 0px;
+    background-color: #1c1c1c;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    border: 0%;
+    background-color: #1c1c1c;
+    justify-content: space-between;
+}
+.logofooter{
+    align-self: flex-end;
+    height: 30px;
+    margin-bottom: 0%;
+    margin-right: 1%;
+}
