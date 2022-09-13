@@ -117,7 +117,7 @@ h3{
     font-family: 'Work Sans', sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .seriesPopulares{
@@ -126,7 +126,7 @@ h3{
     font-family: 'Work Sans', sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .masVistoSeries{
@@ -135,5 +135,5 @@ h3{
     font-family: 'Work Sans', sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
 }
