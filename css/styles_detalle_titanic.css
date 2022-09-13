@@ -118,7 +118,7 @@ footer{
     margin-right: 1%;
 }
 
-/* REGLAS DEL MAIN */
+/* Reglas del main */
 main{
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
@@ -128,68 +128,32 @@ main{
     padding-bottom: 3%;
 }
 
-h1{
+.titulo{
     margin: 0px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color: white;
-    font-size: 80px;
+    font-size: 50px;
     margin-left: 30px;
+    padding-top: 10px;
 }
 
-h3{
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-
-}
-
-.peliculasPopulares{
-    width: 100%;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
+.todo{
     display: flex;
     flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
 }
 
-.seriesPopulares{
-    width: 100%;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
+.imagen{
+    height: 500px;
 }
 
-.masVistoSeries{
-    width: 100%;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.pelicula{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 250px;
-}
-
-.serie{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 250px;
-}
-
-.tapapelicula{
+.poster_titanic{
     height: 100%;
 }
 
-/* AAA */
+.texto_foto{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
