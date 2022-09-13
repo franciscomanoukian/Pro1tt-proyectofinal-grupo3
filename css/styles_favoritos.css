@@ -19,3 +19,24 @@ header{
     margin-bottom: 0%;
     margin-right: 1%;
 }
+.texto_foto{
+    color: white;
+}
+.tapepelicula{
+    height: 300px;
+}
+.peliculasfav{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.tapeserie{
+    height: 300px;
+}
+.texto_fondo2{
+    color: white;
+}
+.seriesfav{
+    display: flex;
+    color: white;
+}
