@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles_favoritos.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles_home.css">
+    <link rel="stylesheet" href="./css/styles_favoritos.css">
     <title>NombreSitio - Favoritos</title>
 </head>
 <body>
-    <header>
-        <section class = "headerIzquierda">
-            <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
-            <h2 class="nombrepagina">Wawa Max</h2>
-        </section>
-    </header>
+
+<header>
+    <section class = "headerIzquierda">
+        <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
+        <h2 class="nombrepagina">Wawa Max</h2>
+    </section>
+
+    <nav class="headerDerecha">
+        <article class="linksHeader">
+            <a class="linkfavoritos" href="./favoritos.html">Favoritos</a>
+            <a class="linkgeneros" href="./generos.html">Géneros</a>
+        </article>
+        <form class="formbusqueda" action="./searchresults.html" method="get">
+            <input class="inputbusqueda" type="text" name="Buscar" id="" placeholder="Película o Serie">
+            <button class="submitbtn" type="submit">Buscar</button>
+        </form>
+    </nav>
+</header>
+
 <main>
     <h1>Favoritos</h1>
     
     <h3>Peliculas Favoritas</h3>
     <section class="peliculasfav">
 
-        <article class="pelicula1">Star Wars
+        <article class="pelicula">Star Wars
         <img src="./img/starwars.jpeg" alt="Poster_SW" class="tapepelicula">
         </article>
 
-        <article class="pelicula2">Titanic
-        <img src="./img/titanic.jpeg" alt="Poster_Titanic" class="tapepelicula2">
+        <article class="pelicula">Titanic
+        <img src="./img/titanic.jpeg" alt="Poster_Titanic" class="tapepelicula">
         </article>
 
     </section>
