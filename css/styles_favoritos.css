@@ -23,15 +23,29 @@ header{
     color: white;
 }
 .tapepelicula{
+    color: white;
+    display: flex;
     height: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
 }
 .peliculasfav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     color: white;
+    flex-direction: row;
+    text-align: center;
 }
 .tapeserie{
     height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
 }
 .texto_fondo2{
     color: white;
@@ -39,4 +53,22 @@ header{
 .seriesfav{
     display: flex;
     color: white;
+}
+.pelicula1{
+    color: white;
+    display: flex;
+    height: 300px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+}
+.tapepelicula2{
+    color: white;
+    display: flex;
+    height: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
 }
