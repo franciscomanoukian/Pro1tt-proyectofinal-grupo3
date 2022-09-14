@@ -192,3 +192,67 @@ h3{
 .tapapelicula{
     height: 100%;
 }
+
+
+
+
+/* Reglas de detalle */
+.detalle{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+}
+
+.titulo{
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 50px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+
+.todo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagen{
+    height: 450px;
+}
+
+.poster_titanic{
+    height: 100%;
+}
+
+.trailer{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    height: 450px;
+    width: 588px;
+}
+
+.trailer_titanic{
+    height: 100%;
+    width: 100%;
+}
+
+.texto_foto{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    justify-content: space-between;
+}
+
+.descripcion{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    width: 100%;
+    justify-content: flex-start;
+}
