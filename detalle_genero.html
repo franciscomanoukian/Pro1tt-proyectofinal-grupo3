@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles_home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <title>Wawa Max - Detalle del Género</title>
 </head>
 <body>
+    <header>
+        <section class = "headerIzquierda">
+            <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
+            <a href="./home.html"><h2 class="nombrepagina">Wawa Max</h2></a>
+        </section>
+        
+        <nav class="headerDerecha">
+            <article class="linksHeader">
+                <a class="linkfavoritos" href="./favoritos.html">Favoritos</a>
+                <a class="linkgeneros" href="./generos.html">Géneros</a>
+            </article>
+            <form class="formbusqueda" action="./searchresults.html" method="get">
+                <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Película o Serie">
+                <button class="submitbtn" type="submit">Buscar</button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Género: Acción</h1>
+        <h2>Películas</h2>
+
+        <section class="seccionPeliSerieReducida">
+        
+            <article class="peliOSerieReducido">
+            Star Wars
+            <img src="./img/starwars.jpeg" alt="Poster_SW" class="tapapelicula">
+            <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+            </article>
     
+            <article class="peliOSerieReducido">
+            Top Gun: Maverick
+            <img src="./img/topgun.jpeg" alt="Top Gun" class="tapapelicula">
+            <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+            </article>
+    
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p class="nuestrosnombres">Freixas, Manoukian y Lopez Teran</p>  
+        <p class="nuestrosnombres">2022 Wawa Max corp.</p>
+        <img class="logofooter" src="./img/LogoSolo.png" alt="Logo">  
+        <p class="nuestrosnombres">¿Necesita ayuda? <a href="mailto:help@wawamax.com">help@wawamax.com</a></p>    
+    </footer>
+
 </body>
 </html>

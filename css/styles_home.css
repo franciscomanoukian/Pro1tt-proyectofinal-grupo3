@@ -159,6 +159,8 @@ h3{
     border-radius: 10px;
     background-color: #1c1c1c88;
     padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .seccionPeliSerieReducida{
@@ -172,6 +174,8 @@ h3{
     border-radius: 10px;
     background-color: #1c1c1c88;
     padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .peliOSerie{
@@ -180,6 +184,21 @@ h3{
     justify-content: center;
     text-align: center;
     height: 250px;
+    align-items: center;
+}
+
+.linkadetalle{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    background-color: #2C5364;
+    padding: 3px;
+    border-radius: 10px;
+    width: 60%;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    margin: 10px;
 }
 
 .peliOSerieReducido{
@@ -192,7 +211,7 @@ h3{
 }
 
 .tapapelicula{
-    height: 90%;
+    height: 85%;
     border-radius: 10px;
 }
 
@@ -315,6 +334,7 @@ h3{
     font-family: 'Inter', sans-serif;
     color: white;
     margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .haBuscado{
@@ -324,3 +344,25 @@ h3{
     margin-top: 10px;
 }
 
+/* Reglas de generos */
+.formato{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hijoFormato{
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c91;
+    width: 30%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaformato{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    list-style: none;
+}
