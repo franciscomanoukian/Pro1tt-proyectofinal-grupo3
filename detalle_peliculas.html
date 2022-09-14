@@ -25,38 +25,42 @@
                 <a class="linkfavoritos" href="./favoritos.html">Favoritos</a>
                 <a class="linkgeneros" href="./generos.html">Géneros</a>
             </article>
-            <form class="formbusqueda" action="get">
-                <input class="inputbusqueda" type="text" name="Buscar" id="" placeholder="Película o Serie">
+            <form class="formbusqueda" action="./searchresults.html" method="get">
+                <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Película o Serie">
                 <button class="submitbtn" type="submit">Buscar</button>
             </form>
         </nav>
     </header>
 
     <main class="detalle">
-        <h1 class="titulo">Titanic</h1>
+        <section class="titulo_texto">
+            <h1 class="titulo">Titanic</h1>
+            
+            <article class="texto_arriba_foto">
+                <ul class="descripcion_detalle">1997</ul>
+            </article>
+        </section>
 
-        <section class="todo">
-            <article class="imagen">
+        <section class="contenido_principal">
+            <article class="imagen_detalle">
                 <img src="./img/titanic.jpeg" alt="Poster_Titanic" class="poster_titanic">
             </article>
             
-            <article class="trailer">
+            <article class="trailer_detalle">
                 <iframe class="trailer_titanic" width="560" height="315" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </article>
             
-            <article class="texto_foto">
-                <ul class="descripcion">Rating</ul>
-                <ul class="descripcion">Fecha de estreno</ul>
-                <ul class="descripcion">Duración</ul>
-                <ul class="descripcion">Sinópsis</ul>
-                <ul class="descripcion">Género</ul>
-                <ul class="descripcion">Favoritos</ul>
+            <article class="texto_abajo_foto">
+                <ul class="descripcion_detalle">Rating</ul>
+                <ul class="descripcion_detalle">Duración</ul>
+                <ul class="descripcion_detalle">Sinópsis</ul>
+                <ul class="descripcion_detalle">Género</ul>
+                <ul class="descripcion_detalle">Favoritos</ul>
             </article>
         </section>
         
     </main>
     
-
     <footer>
         <p class="nuestrosnombres">Freixas, Manoukian y Lopez Teran</p>  
         <p class="nuestrosnombres">2022 Wawa Max corp.</p>
