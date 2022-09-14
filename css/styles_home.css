@@ -256,3 +256,76 @@ h3{
     width: 100%;
     justify-content: flex-start;
 }
+/*esto es styles */
+main{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+}
+
+h1{
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 80px;
+    margin-left: 30px;
+}
+
+h3{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+
+}
+
+.texto_foto{
+    color: white;
+}
+.tapepelicula{
+    color: white;
+    display: flex;
+    height: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+}
+.peliculasfav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.pelicula{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+}
+
+.tapeserie{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+}
+.texto_fondo2{
+    color: white;
+}
+.seriesfav{
+    display: flex;
+    color: white;
+    height: 300px;
+    justify-content: space-around;
+}
