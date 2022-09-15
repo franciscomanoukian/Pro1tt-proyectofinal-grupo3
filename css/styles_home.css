@@ -237,10 +237,32 @@ h3{
 .texto_arriba_foto{
     display: flex;
     flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lista_arriba{
+    display: flex;
+    margin: 0px;
+    padding-top: 5px;
+    padding-left: 0px;
+    flex-direction: row;
+}
+
+.descripcion_arriba{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
 }
 
 .imagen_detalle{
-    height: 350px;
+    height: 390px;
     flex-direction: column;
 }
 
@@ -252,8 +274,8 @@ h3{
     display: flex;
     flex-direction: row;
     padding-left: 5px;
-    height: 350px;
-    width: 588px;
+    height: 390px;
+    width: 673px;
 }
 
 .trailer_titanic{
@@ -268,7 +290,7 @@ h3{
     justify-content: space-between;
 }
 
-.descripcion_detalle{
+.descripcion_abajo{
     color: white;
     display: flex;
     flex-direction: row;
@@ -279,6 +301,16 @@ h3{
     margin-top: 3px;
     margin-bottom: 8px;
 }
+
+.link_drama{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    background-color: #2C5364;
+    border-radius: 10px;
+    padding: 6px;
+}
+
 /*esto es styles */
 
 .texto_foto{
