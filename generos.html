@@ -17,7 +17,7 @@
     <header>
         <section class = "headerIzquierda">
             <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
-            <h2 class="nombrepagina">Wawa Max</h2>
+            <a href="./home.html" class="nombrepagina"><h2 class="nombrepagina">Wawa Max</h2></a>
         </section>
     
         <nav class="headerDerecha">
@@ -26,7 +26,7 @@
                 <a class="linkgeneros" href="./generos.html">Géneros</a>
             </article>
             <form class="formbusqueda" action="./searchresults.html" method="get">
-                <input class="inputbusqueda" type="text" name="Buscar" id="" placeholder="Película o Serie">
+                <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Película o Serie">
                 <button class="submitbtn" type="submit">Buscar</button>
             </form>
         </nav>
@@ -36,56 +36,24 @@
     <h1>Géneros</h1>
 
     <section class="formato">
-    <article class="peliculas">
-        <h2>Películas</h2>
-        <br>
-        <h2>Accion:</h2>
-        <br>
+    <article class="hijoFormato">
+        <p class="tituloFormato">Películas</p>
+        <ul class="listaformato">
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Acción</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Documentales</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Ciencia Ficción</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Drama</a></li>
+        </ul>
     </article>
-    <section class="accion">
-        <article class="pelicula">
-        <h2>Avengers: End Game</h2>
-        <img src="./img/avengers.jpeg" alt="Avengers" class="tapapelicula">
-        </article>
-        <article class="pelicula">
-            <h2>Top Gun: Maverick</h2>
-        <img src="./img/topgun.jpeg" alt="Top Gun" class="tapapelicula">
-        </article>
-        <article class="pelicula">
-        <h2>Senna: The film</h2>
-        <img src="./img/senna.jpeg" alt="Senna" class="tapapelicula">
-        </article>
-        <article class="pelicula">
-            <h2>Star Wars: Episode VI</h2>
-        <img class="tapapelicula" src="./img/starwars.jpeg" alt="Star Wars">
-        </article>
-    </section>
-    <br>
-    <h2>Drama:</h2>
-    <br>
-    <section class="drama">
-        <article class="pelicula">
-        <h2>Titanic</h2>
-        <img src="./img/titanic.jpeg" alt="Titanic" class="tapapelicula">
-        </article>  
-    </section>
-    <section class="formato">
-        <article class="peliculas">
-            <br>
-            <h2>Series</h2>
-            <br>
-            <h2>Animacion:</h2>
-            <br>
-        </article>
-   <section class="animacion">
-        <article class="serie">
-        <h2>Kick Buttowski</h2>
-        <img src="./img/kickbuttowski.jpeg" alt="Kick Buttowski" class="tapapelicula">
-        </article>
-        <article class="serie">
-        <h2>Phineas & Ferb</h2>
-        <img src="./img/phineasferb.jpeg" alt="Phineas&Ferb" class="tapapelicula">
-        </article>
+    <article class="hijoFormato">
+        <p class="tituloFormato">Series</p>
+        <ul class="listaformato">
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Fantásticas</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Animadas</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Ciencia Ficción</a></li>
+            <li class="liDeLista"><a href="./detalle_genero.html" class="linkadetalleGenero">Suspenso</a></li>
+        </ul>
+    </article>
 
     </section>
     

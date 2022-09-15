@@ -18,7 +18,7 @@
 <header>
     <section class = "headerIzquierda">
         <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
-        <a href="./home.html"><h2 class="nombrepagina">Wawa Max</h2></a>
+        <a href="./home.html" class="nombrepagina"><h2 class="nombrepagina">Wawa Max</h2></a>
     </section>
 
     <nav class="headerDerecha">
@@ -27,15 +27,32 @@
             <a class="linkgeneros" href="./generos.html">Géneros</a>
         </article>
         <form class="formbusqueda" action="./searchresults.html" method="get">
-            <input class="inputbusqueda" type="text" name="Buscar" id="" placeholder="Película o Serie">
+            <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Película o Serie">
             <button class="submitbtn" type="submit">Buscar</button>
         </form>
     </nav>
 </header>
 
 <main>
-<h1>Resultados de Búsqueda</h1>
-
+    <h1 class="textobusqueda">Resultados de Búsqueda</h1>
+    <h2>Ha buscado:</h2>
+    <p class="haBuscado">Formula 1</p>
+    
+    <h3>Resultados en Películas:</h3>
+    <section class="seccionPeliSerieReducida">
+        <article class="peliOSerie">Senna: The film
+            <img src="./img/senna.jpeg" alt="Senna" class="tapapelicula">
+            <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+        </article>
+    </section>
+    
+    <h3>Resultados en Series:</h3>
+    <section class="seccionPeliSerieReducida">
+        <article class="peliOSerie">Fernando: The series
+            <img src="./img/fernando.jpeg" alt="Fernando" class="tapapelicula">
+            <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
+        </article>
+    </section>
 </main>
     
 

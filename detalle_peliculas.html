@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wawa Max - Detalle de Película</title>
+    <link rel="stylesheet" href="./css/styles_home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class = "headerIzquierda">
+            <img class="logoheader" src="./img/LogoSolo.png" alt="Logo Empresa">
+            <a href="./home.html" class="nombrepagina"><h2 class="nombrepagina">Wawa Max</h2></a>
+        </section>
+        
+        <nav class="headerDerecha">
+            <article class="linksHeader">
+                <a class="linkfavoritos" href="./favoritos.html">Favoritos</a>
+                <a class="linkgeneros" href="./generos.html">Géneros</a>
+            </article>
+            <form class="formbusqueda" action="./searchresults.html" method="get">
+                <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Película o Serie">
+                <button class="submitbtn" type="submit">Buscar</button>
+            </form>
+        </nav>
+    </header>
+
+    <main class="detalle">
+        <section class="titulo_texto">
+            <h1 class="titulo">Titanic</h1>
+            
+            <article class="texto_arriba_foto">
+                <p class="descripcion_arriba">1997 - ⭐ 7,9</p>
+            </article>
+        </section>
+
+        <section class="contenido_principal">
+            <article class="imagen_detalle">
+                <img src="./img/titanic.jpeg" alt="Poster_Titanic" class="poster_titanic">
+            </article>
+            
+            <article class="trailer_detalle">
+                <iframe class="trailer_titanic" width="560" height="315" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+            
+            <article class="texto_abajo_foto">
+                <ul class="lista_abajo">
+                    <li class="descripcion_abajo">3h 14min</li>
+                    <li class="descripcion_abajo">Una aristócrata de diecisiete años se enamora de un amable pero pobre artista a bordo del lujoso y desafortunado R.M.S. Titanic</li>
+                    <li class="descripcion_abajo">
+                        <a href="./detalle_genero.html" class="link_drama">Drama</a>
+                    </li>
+                    <li class="descripcion_abajo">Agregar a favoritos+</li>
+                </ul>
+            </article>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p class="nuestrosnombres">Freixas, Manoukian y Lopez Teran</p>  
+        <p class="nuestrosnombres">2022 Wawa Max corp.</p>
+        <img class="logofooter" src="./img/LogoSolo.png" alt="Logo">  
+        <p class="nuestrosnombres">¿Necesita ayuda? <a href="mailto:help@wawamax.com">help@wawamax.com</a></p>    
+    </footer>
+</body>
+</html>

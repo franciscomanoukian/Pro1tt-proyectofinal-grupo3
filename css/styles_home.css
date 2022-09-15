@@ -35,6 +35,10 @@ header{
     margin-right: 1%;
 }
 
+.nombrepagina{
+    text-decoration: none;
+}
+
 .linksHeader{
     display: flex;
     justify-content: space-evenly;
@@ -52,6 +56,7 @@ h2{
     color: white;
     font-family: 'Inter', sans-serif;
     margin: 0px;
+    text-decoration: none;
 }
 
 .linkfavoritos{
@@ -123,8 +128,8 @@ main{
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-bottom: 3%;
 }
 
@@ -144,7 +149,7 @@ h3{
 
 }
 
-.peliculasPopulares{
+.seccionPeliSerie{
     width: 100%;
     color: white;
     font-family: 'Work Sans', sans-serif;
@@ -152,88 +157,125 @@ h3{
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
+    border-radius: 10px;
+    background-color: #1c1c1c88;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.seriesPopulares{
+.seccionPeliSerieReducida{
     width: 100%;
     color: white;
     font-family: 'Work Sans', sans-serif;
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border-radius: 10px;
+    background-color: #1c1c1c88;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.masVistoSeries{
-    width: 100%;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.pelicula{
+.peliOSerie{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 250px;
+    align-items: center;
 }
 
-.serie{
+.linkadetalle{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    background-color: #2C5364;
+    padding: 3px;
+    border-radius: 10px;
+    width: 60%;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.peliOSerieReducido{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 250px;
+    margin-right: 30px;
 }
 
 .tapapelicula{
-    height: 100%;
+    height: 85%;
+    border-radius: 10px;
 }
 
 
 
 
 /* Reglas de detalle */
-.detalle{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 3%;
-}
-
 .titulo{
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
     color: white;
     font-size: 50px;
-    margin-left: 30px;
     padding-top: 10px;
 }
 
-.todo{
+.contenido_principal{
     display: flex;
     flex-wrap: wrap;
 }
 
-.imagen{
-    height: 450px;
+.texto_arriba_foto{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lista_arriba{
+    display: flex;
+    margin: 0px;
+    padding-top: 5px;
+    padding-left: 0px;
+    flex-direction: row;
+}
+
+.descripcion_arriba{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+}
+
+.imagen_detalle{
+    height: 390px;
+    flex-direction: column;
 }
 
 .poster_titanic{
     height: 100%;
 }
 
-.trailer{
+.trailer_detalle{
     display: flex;
     flex-direction: row;
     padding-left: 5px;
-    height: 450px;
-    width: 588px;
+    height: 390px;
+    width: 673px;
 }
 
 .trailer_titanic{
@@ -241,45 +283,35 @@ h3{
     width: 100%;
 }
 
-.texto_foto{
+.texto_abajo_foto{
     display: flex;
     flex-direction: column;
     width: 1000px;
     justify-content: space-between;
 }
 
-.descripcion{
+.descripcion_abajo{
     color: white;
     display: flex;
     flex-direction: row;
     padding-left: 5px;
     width: 100%;
     justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 3px;
+    margin-bottom: 8px;
 }
+
+.link_drama{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    background-color: #2C5364;
+    border-radius: 10px;
+    padding: 6px;
+}
+
 /*esto es styles */
-main{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 3%;
-}
-
-h1{
-    margin: 0px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    font-size: 80px;
-    margin-left: 30px;
-}
-
-h3{
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-
-}
 
 .texto_foto{
     color: white;
@@ -287,7 +319,7 @@ h3{
 .tapepelicula{
     color: white;
     display: flex;
-    height: 300px;
+    height: 90%;
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
@@ -300,7 +332,7 @@ h3{
     flex-wrap: wrap;
     color: white;
     text-align: center;
-    width: 100%;
+    width: 90%;
     color: white;
     font-family: 'Work Sans', sans-serif;
 }
@@ -314,7 +346,7 @@ h3{
 }
 
 .tapeserie{
-    height: 300px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -329,21 +361,68 @@ h3{
     height: 300px;
     justify-content: space-around;
 }
-/* GENEROS */
-.accion{
-    display: flex;
-    justify-content: space-around;
-    height: 300px;
+
+
+.textobusqueda{
+    font-size: 60px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
-.drama{
+
+.haBuscado{
+    width: 100%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 10px;
+}
+
+/* Reglas de generos */
+.formato{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.tituloFormato{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    align-self: center;
+    font-size: 35px;
+}
+
+.hijoFormato{
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c91;
+    width: 30%;
+    border-radius: 10px;
     justify-content: flex-start;
-    height: 300px;
+    align-items: flex-start;
 }
-/* ACA ARRANCA EL ESTILO DE SERIES */
-.animacion{
-    display: flex;
-    justify-content: space-around;
+
+.listaformato{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    list-style: none;
+}
+
+.liDeLista{
+    padding-bottom: 25px;
     
-    height: 300px;
+}
+
+.linkadetalleGenero{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #2C5364;
+    border-radius: 10px;
+    padding: 10px;
 }
