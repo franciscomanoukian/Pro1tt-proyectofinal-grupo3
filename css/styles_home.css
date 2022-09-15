@@ -310,7 +310,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 250px;
+    height: 300px;
 }
 
 .tapeserie{
@@ -328,4 +328,22 @@ h3{
     color: white;
     height: 300px;
     justify-content: space-around;
+}
+/* GENEROS */
+.accion{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+.drama{
+    display: flex;
+    justify-content: flex-start;
+    height: 300px;
+}
+/* ACA ARRANCA EL ESTILO DE SERIES */
+.animacion{
+    display: flex;
+    justify-content: space-around;
+    
+    height: 300px;
 }
