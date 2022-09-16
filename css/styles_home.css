@@ -268,6 +268,7 @@ h3{
 
 .poster_titanic{
     height: 100%;
+    border-radius: 10px;
 }
 
 .trailer_detalle{
@@ -281,13 +282,20 @@ h3{
 .trailer_titanic{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 
 .texto_abajo_foto{
     display: flex;
     flex-direction: column;
     width: 1000px;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.lista_abajo{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
 }
 
 .descripcion_abajo{
@@ -302,13 +310,36 @@ h3{
     margin-bottom: 8px;
 }
 
-.link_drama{
+.link_botones_generos{
     color: white;
     font-family: 'Work Sans', sans-serif;
     text-decoration: none;
     background-color: #2C5364;
     border-radius: 10px;
     padding: 6px;
+    margin-right: 10px;
+}
+
+.link_favoritos{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    background-color: #2C5364;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+
+/* Detalle series */
+.poster_GOT{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.trailer_GOT{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 /*esto es styles */
