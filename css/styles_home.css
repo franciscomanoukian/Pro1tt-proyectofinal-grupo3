@@ -187,6 +187,7 @@ h3{
     text-align: center;
     height: 250px;
     align-items: center;
+    margin-top: 5px;
 }
 
 .linkadetalle{
@@ -211,11 +212,13 @@ h3{
     text-align: center;
     height: 250px;
     margin-right: 30px;
+    margin-top: 5px;
 }
 
 .tapapelicula{
     height: 85%;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 
@@ -586,6 +589,7 @@ h3{
     }
     .peliOSerieReducido{
         margin-bottom: 25px;
+        margin-right: 0px;
     }
     .seccionPeliSerie{
         flex-wrap: wrap;
@@ -594,6 +598,7 @@ h3{
     }
     .peliOSerie{
         margin-bottom: 25px;
+        margin-right: 0px;
     }
     h3{
         padding: 0px;
@@ -651,5 +656,8 @@ h3{
         margin-top: 10px;
         border-radius: 10px;
         padding: 2px;
+    }
+    .tituloGenero{
+        font-size: 60px;
     }
 }
