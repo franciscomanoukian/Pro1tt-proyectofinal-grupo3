@@ -457,3 +457,104 @@ h3{
     border-radius: 10px;
     padding: 10px;
 }
+
+
+@media (max-width: 420px) {
+    main{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .header{
+        height: 70px;
+    }
+    .nombrepagina{
+        font-size: 18px;
+    }
+    .logoheader{
+        margin: 0px;
+        margin-right: 4px;
+    }
+    .headerIzquierda{
+        width: 45%;
+    }
+    .headerDerecha{
+        width: 55%;
+    }
+    .linksHeader{
+        flex-direction: column;
+    }
+    .formbusqueda{
+        width: 100px;
+        font-size: 14px;
+    }
+    .inputbusqueda{
+        width: 100px;
+        margin-bottom: 3px;
+        padding: 0px;
+    }
+    .submitbtn{
+        padding: 0px;
+        width: 80px;
+    }
+    .linksHeader{
+        width: 37%;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    .linkfavoritos{
+        margin-bottom: 3px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .linkgeneros{
+        font-size: 14px;
+        text-align: center;
+    }
+    .listaformato{
+        padding-inline-start: 0px;
+    }
+    .hijoFormato{
+        width: 40px;
+        padding: 9px;
+    }
+
+    .formato {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hijoFormato {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .liDeLista {
+        /* padding-bottom: 25px; */
+        background-color: #2C5364;
+        border-radius: 10px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        margin: 5px 0px;
+    }
+
+    .linkadetalleGenero {
+        color: white;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+         background-color: transparent; 
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer{
+        margin-bottom: 100px;
+    }
+}
