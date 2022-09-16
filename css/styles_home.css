@@ -291,6 +291,10 @@ h3{
     flex-direction: column;
     width: 1000px;
     justify-content: space-around;
+    background-color: #1c1c1c88;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .lista_abajo{
@@ -467,7 +471,6 @@ h3{
     padding: 10px;
 }
 
-
 @media (max-width: 420px) {
     .header{
         height: 70px;
@@ -612,5 +615,41 @@ h3{
     .haBuscado{
         font-size: 30px;
         margin-left: 10px;
+    }
+
+    /* reglas detalle responsive */ 
+    .titulo{
+        display: flex; 
+        justify-content: center;
+    } 
+    
+    .contenido_principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .descripcion_arriba{
+        display: flex; 
+        justify-content: center;
+    } 
+    
+    .imagen_detalle{ 
+        display: flex; 
+        justify-content: center; 
+        width: 325px; 
+    } 
+    
+    .trailer_detalle {
+        height: 183px;
+        width: 325px;
+        margin-top: 8px;
+    }
+
+    .texto_abajo_foto {
+        display: flex;
+        background-color: #1c1c1c88;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 2px;
     }
 }
