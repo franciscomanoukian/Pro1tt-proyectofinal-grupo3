@@ -50,6 +50,7 @@ header{
     margin-left: 30px;
     margin-right: 30px;
     justify-self: flex-start;
+    height: 80%;
 }
 
 h2{
@@ -434,18 +435,26 @@ h3{
     width: 30%;
     border-radius: 10px;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+
 }
 
 .listaformato{
     color: white;
     font-family: 'Work Sans', sans-serif;
     list-style: none;
+    padding-inline-start: 0%;
+
 }
 
 .liDeLista{
-    padding-bottom: 25px;
-    
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
+    background-color: #2C5364;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .linkadetalleGenero{
@@ -460,10 +469,6 @@ h3{
 
 
 @media (max-width: 420px) {
-    main{
-        padding-left: 1%;
-        padding-right: 1%;
-    }
     .header{
         height: 70px;
     }
@@ -471,8 +476,8 @@ h3{
         font-size: 18px;
     }
     .logoheader{
+        height: 70%;
         margin: 0px;
-        margin-right: 4px;
     }
     .headerIzquierda{
         width: 45%;
@@ -486,6 +491,8 @@ h3{
     .formbusqueda{
         width: 100px;
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
     }
     .inputbusqueda{
         width: 100px;
@@ -495,6 +502,7 @@ h3{
     .submitbtn{
         padding: 0px;
         width: 80px;
+        align-self: center;
     }
     .linksHeader{
         width: 37%;
@@ -555,6 +563,54 @@ h3{
     }
 
     footer{
-        margin-bottom: 100px;
+        margin-bottom: 200px;
+    }
+    .seccionPeliSerieReducida{
+    width: 95%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #1c1c1c88;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+    }
+    .peliOSerieReducido{
+        margin-bottom: 25px;
+    }
+    .seccionPeliSerie{
+        flex-wrap: wrap;
+        width: 95%;
+        justify-content: space-around;
+    }
+    .peliOSerie{
+        margin-bottom: 25px;
+    }
+    h3{
+        padding: 0px;
+        margin: 10px;
+    }
+    h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 65px;
+    }
+    .textobusqueda{
+        font-size: 0px;
+        text-align: left;
+    }
+    h2{
+        margin-left: 10px;
+        font-size: 40px;
+    }
+    .haBuscado{
+        font-size: 30px;
+        margin-left: 10px;
     }
 }
