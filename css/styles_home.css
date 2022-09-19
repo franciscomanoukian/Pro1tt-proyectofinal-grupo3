@@ -1,7 +1,33 @@
+/* REGLAS PARA TODOS LOS HTML */
 body{
     width: 100vw;
     margin: 0px;
     background-color: #1c1c1c;
+}
+
+main{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+
+h1{
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 80px;
+    margin-left: 30px;
+}
+
+
+h3{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+
 }
 
 /* REGLAS DEL HEADER */
@@ -124,32 +150,20 @@ footer{
     margin-right: 1%;
 }
 
-/* REGLAS DEL MAIN */
-main{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
-}
+/* REGLAS DEL HOME */
 
-h1{
+.nombrePeliOSerie{
+    padding: 0px;
     margin: 0px;
-    font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 80px;
-    margin-left: 30px;
+    font-family: 'Work Sans', sans-serif;
 }
 
-
-h3{
+.texto_foto{
     color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 30px;
-
 }
 
+/* La siguiente etiqueta define las propiedades para un listado de películas o series */
 .seccionPeliSerie{
     width: 100%;
     color: white;
@@ -165,6 +179,7 @@ h3{
     padding-top: 20px;
 }
 
+/* La siguiente etiqueta define las propiedades para un listado de películas o series, cuando se muestran menos de 5 titulares */
 .seccionPeliSerieReducida{
     width: 100%;
     color: white;
@@ -222,9 +237,7 @@ h3{
 }
 
 
-
-
-/* Reglas de detalle */
+/* REGLAS DE DETALLE */
 .titulo{
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
@@ -338,7 +351,7 @@ h3{
 }
 
 
-/* Detalle series */
+/* REGLAS DE DETALLE DE SERIES */
 .poster_GOT{
     height: 100%;
     border-radius: 10px;
@@ -350,11 +363,9 @@ h3{
     border-radius: 10px;
 }
 
-/*esto es styles */
+/* REGLAS DE FAVORITOS */
 
-.texto_foto{
-    color: white;
-}
+
 .tapepelicula{
     color: white;
     display: flex;
@@ -363,17 +374,6 @@ h3{
     justify-content: space-around;
     text-align: center;
     flex-direction: row;
-}
-.peliculasfav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    color: white;
-    text-align: center;
-    width: 90%;
-    color: white;
-    font-family: 'Work Sans', sans-serif;
 }
 
 .pelicula{
@@ -391,17 +391,8 @@ h3{
     text-align: center;
     flex-direction: row;
 }
-.texto_fondo2{
-    color: white;
-}
-.seriesfav{
-    display: flex;
-    color: white;
-    height: 300px;
-    justify-content: space-around;
-}
 
-
+/* REGLAS DE SEARCH RESULTS */
 .textobusqueda{
     font-size: 60px;
     font-family: 'Inter', sans-serif;
@@ -417,7 +408,7 @@ h3{
     margin-top: 10px;
 }
 
-/* Reglas de generos */
+/* REGLAS DE GENEROS */
 .formato{
     display: flex;
     flex-direction: row;
@@ -474,6 +465,7 @@ h3{
     padding: 10px;
 }
 
+/* REGLAS DE RESPONSIVE */
 @media (max-width: 420px) {
     .header{
         height: 70px;
