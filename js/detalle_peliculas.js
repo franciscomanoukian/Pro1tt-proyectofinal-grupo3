@@ -9,24 +9,30 @@ fetch(urlDetalle).then(function (response) {
     return response.json()
 }).then(function (data) {
     //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
-    let resultados = data.results;
     console.log(data);
 
     //1 Capturo el elemento html en donde quiero hacer una modificación
-    let pelisPopulares = document.querySelector('#pelisPopulares');
-    let pelisPopus = ''
+    let titulo = document.querySelector('.titulo');
+    let anioRating = document.querySelector('#año_y_rating');
+    let fotoPortada = document.querySelector('#foto_portada');
+    let duracion = document.querySelector('#duracion')
+    let sinopsis = document.querySelector('#sinopsis')
+    let generos = document.querySelector('#generos_pelicula')
 
-    //2 Recorro la información de la api y la organizo para mostarla en el html
-    for(let i=0; i<5; i++){
-        //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
-        pelisPopus += `<article class="peliOSerie">
-                                <p class="nombrePeliOSerie">${arrayDePelisPopulares[i].title}</p>
-                                <img src='https://image.tmdb.org/t/p/w500/${arrayDePelisPopulares[i].poster_path}'  alt="Titanic" class="tapapelicula">
-                                <a href="./detalle_peliculas.html?id=${arrayDePelisPopulares[i].id}" class="linkadetalle">Ver más</a>
-                            </article>`
+    // Preparo estructura
+    listaGeneros = ''
+    generosTodos = data.genres
+    for (let i = 0; i < generosTodos.length; i++) {
+       listaGeneros+=`<a href="./detalle_genero.html" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
     }
+
     //Con toda la estructura html completa ahora la paso al DOM
-    pelisPopulares.innerHTML = pelisPopus;
+    titulo.innerText = `${data.title}`;
+    anioRating.innerText = `${data.release_date} - ⭐ ${data.vote_average}`
+    fotoPortada.innerHTML = ` <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'  alt="${data.title}" class="tapapelicula">` 
+    duracion.innerText = `${data.runtime} minutos`
+    sinopsis.innerText = `${data.overview}`
+    generos.innerHTML = `${listaGeneros}`
     
 }).catch(function (error) {
     console.log(error);
