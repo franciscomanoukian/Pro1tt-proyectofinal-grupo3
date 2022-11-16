@@ -20,7 +20,7 @@ fetch(urlPelisPopulares).then(function (response) {
         pelisPopus += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDePelisPopulares[i].title}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDePelisPopulares[i].poster_path}'  alt="Titanic" class="tapapelicula">
-                                <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+                                <a href="./detalle_peliculas.html?id=${arrayDePelisPopulares[i].id}" class="linkadetalle">Ver más</a>
                             </article>`
     }
     //Con toda la estructura html completa ahora la paso al DOM

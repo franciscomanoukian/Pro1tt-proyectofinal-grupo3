@@ -12,4 +12,3 @@ formsbusqueda.addEventListener('submit', function (e) {
         alert('Ponga mas caracteres')
     }
 })
-
