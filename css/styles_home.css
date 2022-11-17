@@ -171,12 +171,13 @@ footer{
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 300px;
     border-radius: 10px;
     background-color: #1c1c1c88;
-    padding: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    margin: 10px;
+    padding-bottom: 10px;
+    
 }
 
 /* La siguiente etiqueta define las propiedades para un listado de películas o series, cuando se muestran menos de 5 titulares */
@@ -198,11 +199,12 @@ footer{
 .peliOSerie{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: center;
-    height: 250px;
+    height: 100%;
     align-items: center;
     margin-top: 5px;
+    max-width: 140px;
 }
 
 .linkadetalle{
@@ -231,13 +233,20 @@ footer{
 }
 
 .tapapelicula{
-    height: 85%;
+    height: 210px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.poster{
+    height: 300px;
     border-radius: 10px;
     margin-top: 5px;
 }
 
 
 /* REGLAS DE DETALLE */
+
 .titulo{
     margin: 0px;
     font-family: 'Work Sans', sans-serif;
@@ -249,6 +258,9 @@ footer{
 .contenido_principal{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .texto_arriba_foto{
@@ -278,11 +290,6 @@ footer{
     padding-left: 0px;
 }
 
-.imagen_detalle{
-    height: 390px;
-    flex-direction: column;
-}
-
 .poster_titanic{
     height: 100%;
     border-radius: 10px;
@@ -305,12 +312,13 @@ footer{
 .texto_abajo_foto{
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 75%;
     justify-content: space-around;
     background-color: #1c1c1c88;
     margin-top: 10px;
     border-radius: 10px;
     padding: 5px;
+    justify-self: flex-end;
 }
 
 .lista_abajo{
@@ -587,6 +595,7 @@ footer{
         flex-wrap: wrap;
         width: 95%;
         justify-content: space-around;
+        height: auto;
     }
     .peliOSerie{
         margin-bottom: 25px;
