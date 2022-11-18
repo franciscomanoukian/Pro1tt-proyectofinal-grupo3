@@ -6,7 +6,7 @@ let urlMasVistoSeries = 'https://api.themoviedb.org/3/tv/top_rated?api_key=81fae
 fetch(urlPelisPopulares).then(function (response) {
     return response.json()
 }).then(function (data) {
-    //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
+    //Acá ya tenemos los datos finales y es donde debemos escribir nuestro código.
     let arrayDePelisPopulares = data.results;
     console.log(arrayDePelisPopulares);
 
