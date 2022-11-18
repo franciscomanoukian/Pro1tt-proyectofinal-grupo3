@@ -29,7 +29,7 @@ fetch(busquedaPeliculas)
         resultadosApi += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDeBusquedaPelis[i].title}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaPelis[i].poster_path}'  alt="img" class="tapapelicula">
-                                <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+                                <a href='./detalle_peliculas.html?id=${arrayDeBusquedaPelis[i].id}' class="linkadetalle">Ver más</a>
                             </article>`
     }
     //Con toda la estructura html completa ahora la paso al DOM
@@ -60,7 +60,7 @@ fetch(busquedaSeries)
             resultadosApi += `<article class="peliOSerie">
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}'  alt="img" class="tapapelicula">
-                                    <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+                                    <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
                                 </article>`
         }
     }else{
@@ -69,7 +69,7 @@ fetch(busquedaSeries)
             resultadosApi += `<article class="peliOSerie">
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}'  alt="img" class="tapapelicula">
-                                    <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+                                    <a href="./detalle_series.html?id=${arrayDeBusquedaSeries[i].id}" class="linkadetalle">Ver más</a>
                                 </article>`
         }
     }
