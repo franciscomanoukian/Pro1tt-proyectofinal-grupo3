@@ -26,7 +26,7 @@ fetch(urlDetalle).then(function (response) {
     listaGeneros = 'AGREGARLE QUERYSTRINGS'
     generosTodos = data.genres
     for (let i = 0; i < generosTodos.length; i++) {
-       listaGeneros+=`<a href="./detalle_genero.html?genre_id="${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
+       listaGeneros+=`<a href="./detalle_genero.html?id_genero=${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
     }
 
     //Con toda la estructura html completa ahora la paso al DOM
