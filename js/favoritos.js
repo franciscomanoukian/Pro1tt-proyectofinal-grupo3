@@ -17,19 +17,18 @@ if (favoritos == null || favoritos.length == 0) {
 } else {
     
     for (let i = 0; i < favoritos.length; i++) {
-        let url = `https://rickandmortyapi.com/api/character/${favoritos[i]}`
+        let url = `https://api.themoviedb.org/3/movie/${favoritos[i]}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
 
         fetch(url)
         .then(function (response) {
             return response.json();
         }).then(function (data) {
-            console.log(data);
-            personajesFavoritos += `<article>
-                                        <img src=${data.image} alt='${data.name}' />
-                                        <p>Name: <a href="./detallePersonaje.html?idPersonaje=${data.id}"> ${data.name}</a> </p>
-                                        <p>Status: ${data.status} </p>
+            peliculasFavoritas += `<article>
+                                        <img src=${data.poster_path} alt='img' />
+                                        <p>Name: <a href="${data.title}"> ${data.title}</a> </p>
+                                        <p>Img: ${data.poster_path} </p>
                                     </article>`;
-            section.innerHTML = personajesFavoritos;
+            section.innerHTML = personajesFavoritos; 
 
             return data;
         }).catch(function (error) {
