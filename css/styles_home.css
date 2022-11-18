@@ -172,12 +172,12 @@ footer{
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
-    height: 300px;
+    height: fit-content;
     border-radius: 10px;
     background-color: #1c1c1c88;
     margin: 10px;
     padding-bottom: 10px;
-    
+    align-items: flex-end;
 }
 
 /* La siguiente etiqueta define las propiedades para un listado de películas o series, cuando se muestran menos de 5 titulares */
@@ -356,6 +356,7 @@ footer{
     background-color: #2C5364;
     border-radius: 10px;
     padding: 6px;
+    width: fit-content;
 }
 
 
