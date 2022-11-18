@@ -4,7 +4,7 @@ console.log(recupeStorage);
 
 let favoritos = JSON.parse(recupeStorage);
 
-let section = document.querySelector("#lista");
+let section = document.querySelector("#pelisFavoritas");
 let personajesFavoritos = ''; /* ---------------------->   OJALDRE ACA */
 
 console.log(favoritos);

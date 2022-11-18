@@ -25,12 +25,24 @@ fetch(busquedaPeliculas)
 
     //2 Recorro la información de la api y la organizo para mostarla en el html
     for(let i=0; i<5; i++){
+        let foto = './img/imagen_not_found.jpg'
+        let portada = document.querySelector('.tapapelicula')
+        if (arrayDeBusquedaPelis[i].poster_path != null) {
+            foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaPelis[i].poster_path}`
+        } 
         //Dentro del for voy acumulando en la variable una estructura html por cada peli del array.
         resultadosApi += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDeBusquedaPelis[i].title}</p>
+<<<<<<< HEAD
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaPelis[i].poster_path}'  alt="img" class="tapapelicula">
                                 <a href='./detalle_peliculas.html?id=${arrayDeBusquedaPelis[i].id}' class="linkadetalle">Ver más</a>
+=======
+                                <img src='${foto}'  alt="img" class="tapapelicula">
+                                <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+>>>>>>> aa855fd (avances resultadoBusqueda y favoritos)
                             </article>`
+
+        
     }
     //Con toda la estructura html completa ahora la paso al DOM
     seccionPeliSerie.innerHTML = resultadosApi;

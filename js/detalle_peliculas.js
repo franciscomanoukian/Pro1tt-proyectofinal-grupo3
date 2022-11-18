@@ -12,7 +12,6 @@ fetch(urlDetalle).then(function (response) {
     return response.json()
 }).then(function (data) {
     //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
-    console.log(data);
 
     //1 Capturo el elemento html en donde quiero hacer una modificación
     let titulo = document.querySelector('.titulo');
@@ -147,17 +146,17 @@ botonFavoritos.addEventListener("click",function (e) {
     if(favoritos.includes(idPeli)){
         let indice = favoritos.indexOf(idPeli);
         favoritos.splice(indice,1);
-        botonFavoritos.innerText="Agregar a Favorito";
+        botonFavoritos.innerText="+ Agregar a Favorito";
     }else{
     /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
         favoritos.push(idPeli);
-        botonFavoritos.innerText="Quitar de Favorito";
+        botonFavoritos.innerText="- Quitar de Favorito";
     }
 
     /* Si lo incluye o no, quiero poder subir el array al localStorage ->
     Pero tengo que pasarlo a JSON primeramente*/
     let favToString = JSON.stringify(favoritos);
-/*      ["2","4","5"]                [2,4,5]        */
+
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
     localStorage.setItem('favoritos',favToString)
     
