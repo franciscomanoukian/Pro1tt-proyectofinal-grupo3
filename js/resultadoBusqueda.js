@@ -26,7 +26,6 @@ fetch(busquedaPeliculas)
     //2 Recorro la información de la api y la organizo para mostarla en el html
     for(let i=0; i<5; i++){
         let foto = './img/imagen_not_found.jpg'
-        let portada = document.querySelector('.tapapelicula')
         if (arrayDeBusquedaPelis[i].poster_path != null) {
             foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaPelis[i].poster_path}`
         } 
@@ -64,6 +63,7 @@ fetch(busquedaSeries)
     if (arrayDeBusquedaSeries.length>5) {
         for(let i=0; i<5; i++){
             //Dentro del for voy acumulando en la variable una estructura html por cada serie del array.
+<<<<<<< HEAD
             if (arrayDeBusquedaSeries[i].poster_path != null) {
                 foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}`
             } 
@@ -71,11 +71,22 @@ fetch(busquedaSeries)
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src=${foto}'  alt="img" class="tapapelicula">
                                     <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
+=======
+            let foto = './img/imagen_not_found.jpg'
+            if (arrayDeBusquedaSeries[i].poster_path != null) {
+            foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}`
+            }
+            resultadosApi += `<article class="peliOSerie">
+                                    <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
+                                    <img src='${foto}'  alt="img" class="tapapelicula">
+                                    <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+>>>>>>> bf5f9f6 (avances en resultadoBusqueda y favoritos)
                                 </article>`
         }
     }else{
         for(let i=0; i<arrayDeBusquedaSeries.length; i++){
             //Dentro del for voy acumulando en la variable una estructura html por cada serie del array.
+<<<<<<< HEAD
             if (arrayDeBusquedaSeries[i].poster_path != null) {
                 foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}`
             } 
@@ -83,6 +94,16 @@ fetch(busquedaSeries)
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='${foto}}'  alt="img" class="tapapelicula">
                                     <a href="./detalle_series.html?id=${arrayDeBusquedaSeries[i].id}" class="linkadetalle">Ver más</a>
+=======
+            let foto = './img/imagen_not_found.jpg'
+            if (arrayDeBusquedaSeries[i].poster_path != null) {
+            foto = `https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}`
+            }
+            resultadosApi += `<article class="peliOSerie">
+                                    <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
+                                    <img src='${foto}'  alt="img" class="tapapelicula">
+                                    <a href="./detalle_peliculas.html" class="linkadetalle">Ver más</a>
+>>>>>>> bf5f9f6 (avances en resultadoBusqueda y favoritos)
                                 </article>`
         }
     }
