@@ -25,7 +25,7 @@ fetch(busquedaPeliculas)
 
     //2 Recorro la información de la api y la organizo para mostarla en el html
     for(let i=0; i<5; i++){
-        //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
+        //Dentro del for voy acumulando en la variable una estructura html por cada peli del array.
         resultadosApi += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDeBusquedaPelis[i].title}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaPelis[i].poster_path}'  alt="img" class="tapapelicula">
@@ -56,7 +56,7 @@ fetch(busquedaSeries)
     //2 Recorro la información de la api y la organizo para mostarla en el html
     if (arrayDeBusquedaSeries.length>5) {
         for(let i=0; i<5; i++){
-            //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
+            //Dentro del for voy acumulando en la variable una estructura html por cada serie del array.
             resultadosApi += `<article class="peliOSerie">
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}'  alt="img" class="tapapelicula">
@@ -65,7 +65,7 @@ fetch(busquedaSeries)
         }
     }else{
         for(let i=0; i<arrayDeBusquedaSeries.length; i++){
-            //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
+            //Dentro del for voy acumulando en la variable una estructura html por cada serie del array.
             resultadosApi += `<article class="peliOSerie">
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='https://image.tmdb.org/t/p/w500/${arrayDeBusquedaSeries[i].poster_path}'  alt="img" class="tapapelicula">
