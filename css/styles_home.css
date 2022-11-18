@@ -246,6 +246,12 @@ footer{
 
 
 /* REGLAS DE DETALLE */
+.proveImg{
+    height: 70px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
 
 .titulo{
     margin: 0px;

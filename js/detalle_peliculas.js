@@ -53,13 +53,16 @@ fetch(urlWatchProviders).then(function (response) {
     //1 Capturo el elemento html en donde quiero hacer una modificación
     let watchProviders = document.querySelector('#watchProviders')
 
-    let nombreProvider = ''
+ 
     //Con toda la estructura html completa ahora la paso al DOM
     
-    for (let i = 0; i < objLitProviders.length; i++) {
-        nombreProvider += objLitProviders[i].provider_name
-        
+    if (objLitProviders.MX != undefined) {
+        let prove = objLitProviders.MX.buy[0];
+        watchProviders.innerHTML = `<p class="prove">Dónde ver: ${prove.provider_name}</p>
+                                    <img class="proveImg" src="https://image.tmdb.org/t/p/w500/${prove.logo_path}">`
     }
+        
+    
 
     watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
     
