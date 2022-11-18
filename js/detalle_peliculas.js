@@ -127,7 +127,6 @@ let favoritos = [];
 /* recuperamos el storage */
 let recuperoStorage = localStorage.getItem('favoritos');
 
-/* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
     favoritos = JSON.parse(recuperoStorage);
 };
@@ -142,13 +141,13 @@ botonFavoritos.addEventListener("click",function (e) {
     e.preventDefault()
     
     /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
-    if(favoritos.includes(id)){
-        let indice = favoritos.indexOf(id);
+    if(favoritos.includes(idPeli)){
+        let indice = favoritos.indexOf(idPeli);
         favoritos.splice(indice,1);
         botonFavoritos.innerText="Agregar a Favorito";
     }else{
     /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
-        favoritos.push(id);
+        favoritos.push(idPeli);
         botonFavoritos.innerText="Quitar de Favorito";
     }
 
