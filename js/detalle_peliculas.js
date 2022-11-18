@@ -23,7 +23,7 @@ fetch(urlDetalle).then(function (response) {
     let botonFavoritos = document.querySelector('#botonFavoritos')
 
     // Preparo estructura
-    listaGeneros = 'AGREGARLE QUERYSTRINGS'
+    listaGeneros = ''
     generosTodos = data.genres
     for (let i = 0; i < generosTodos.length; i++) {
        listaGeneros+=`<a href="./detalle_genero.html?id_genero=${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
