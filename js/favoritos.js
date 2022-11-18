@@ -1,4 +1,3 @@
-/* Recuperar localStorage */
 let recupeStorage = localStorage.getItem('favoritos');
 console.log(recupeStorage);
 
