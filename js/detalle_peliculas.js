@@ -135,7 +135,7 @@ if(recuperoStorage != null){
 
 /* Validar si este id existe en el favoritos (localsStorage) */
 if (favoritos.includes(idPeli)) {
-    botonFavoritos.innerText="Quitar de Favorito";
+    botonFavoritos.innerText="- Quitar de Favorito";
 }
 
 /* Agregarle un evento al boton de agregar a favorito */
