@@ -21,7 +21,7 @@ fetch(urlDetalle).then(function (response) {
     let duracion = document.querySelector('#duracion')
     let sinopsis = document.querySelector('#sinopsis')
     let generos = document.querySelector('#generos_pelicula')
-    let botonFavoritos = document.querySelector('#botonFavoritos')
+    let botonFavoritosPelis = document.querySelector('#botonFavoritosPelis')
 
     // Preparo estructura
     listaGeneros = ''
@@ -160,40 +160,40 @@ botonRecomendaciones.addEventListener('click', function (e) {
 
 
 /* Array que se rellena en favoritos */
-let favoritos = [];
+let favoritosPelis = [];
 
 /* recuperamos el storage */
-let recuperoStorage = localStorage.getItem('favoritos');
+let recuperoStorage = localStorage.getItem('favoritosPelis');
 
 if(recuperoStorage != null){
-    favoritos = JSON.parse(recuperoStorage);
+    favoritosPelis = JSON.parse(recuperoStorage);
 };
 
 /* Validar si este id existe en el favoritos (localsStorage) */
-if (favoritos.includes(idPeli)) {
-    botonFavoritos.innerText="- Quitar de Favorito";
+if (favoritosPelis.includes(idPeli)) {
+    botonFavoritosPelis.innerText="- Quitar de Favorito";
 }
 
 /* Agregarle un evento al boton de agregar a favorito */
-botonFavoritos.addEventListener("click",function (e) {
+botonFavoritosPelis.addEventListener("click",function (e) {
     e.preventDefault()
     
     /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
-    if(favoritos.includes(idPeli)){
-        let indice = favoritos.indexOf(idPeli);
-        favoritos.splice(indice,1);
-        botonFavoritos.innerText="+ Agregar a Favorito";
+    if(favoritosPelis.includes(idPeli)){
+        let indice = favoritosPelis.indexOf(idPeli);
+        favoritosPelis.splice(indice,1);
+        botonFavoritosPelis.innerText="+ Agregar a Favorito";
     }else{
     /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
-        favoritos.push(idPeli);
-        botonFavoritos.innerText="- Quitar de Favorito";
+        favoritosPelis.push(idPeli);
+        botonFavoritosPelis.innerText="- Quitar de Favorito";
     }
 
     /* Si lo incluye o no, quiero poder subir el array al localStorage ->
     Pero tengo que pasarlo a JSON primeramente*/
-    let favToString = JSON.stringify(favoritos);
+    let favToString = JSON.stringify(favoritosPelis);
 
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
-    localStorage.setItem('favoritos',favToString)
+    localStorage.setItem('favoritosPelis',favToString)
     
 });

@@ -24,7 +24,7 @@ fetch(urlDetalle).then(function (response) {
     let duracion = document.querySelector('#duracion')
     let sinopsis = document.querySelector('#sinopsis')
     let generos = document.querySelector('#generos_pelicula')
-    let botonFavoritos = document.querySelector('#botonFavoritos')
+    let botonFavoritosSeries = document.querySelector('#botonFavoritosSeries')
 
     // Preparo estructura
     listaGeneros = ''
@@ -162,3 +162,42 @@ botonRecomendaciones.addEventListener('click', function (e) {
     }
 })
 
+
+/* Array que se rellena en favoritos */
+let favoritosSeries = [];
+
+/* recuperamos el storage */
+let recuperoStorage = localStorage.getItem('favoritosSeries');
+
+if(recuperoStorage != null){
+    favoritosSeries = JSON.parse(recuperoStorage);
+};
+
+/* Validar si este id existe en el favoritos (localsStorage) */
+if (favoritosSeries.includes(idSerie)) {
+    botonFavoritosSeries.innerText="- Quitar de Favorito";
+}
+
+/* Agregarle un evento al boton de agregar a favorito */
+botonFavoritosSeries.addEventListener("click",function (e) {
+    e.preventDefault()
+    
+    /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
+    if(favoritosSeries.includes(idSerie)){
+        let indice = favoritosSeries.indexOf(idSerie);
+        favoritosSeries.splice(indice,1);
+        botonFavoritosSeries.innerText="+ Agregar a Favorito";
+    }else{
+    /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
+        favoritosSeries.push(idSerie);
+        botonFavoritosSeries.innerText="- Quitar de Favorito";
+    }
+
+    /* Si lo incluye o no, quiero poder subir el array al localStorage ->
+    Pero tengo que pasarlo a JSON primeramente*/
+    let favToString = JSON.stringify(favoritosSeries);
+
+    /* Cuando este en JSON ahora si puedo subirlo al localStorage */
+    localStorage.setItem('favoritosSeries',favToString)
+    
+});
