@@ -35,37 +35,34 @@
 
     <main class="detalle">
         <section class="titulo_texto">
-            <h1 class="titulo">Game of Thrones</h1>
+            <h1 class="titulo"></h1>
             
             <article class="texto_arriba_foto">
-                <p class="descripcion_arriba">2011-2019 - ⭐ 9,2</p>
+                <p class="descripcion_arriba" id="año_y_rating"></p>
             </article>
         </section>
 
         <section class="contenido_principal">
-            <article class="imagen_detalle">
-                <img src="./img/gameofthrones.jpeg" alt="Poster_GOT" class="poster_GOT">
-            </article>
-            
-            <article class="trailer_detalle">
-                <iframe class="trailer_GOT" width="560" height="315" src="https://www.youtube.com/embed/bjqEWgDVPe0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <article class="imagen_detalle" id="foto_portada">
             </article>
             
             <article class="texto_abajo_foto">
-                <ul class="lista_abajo">
-                    <li class="descripcion_abajo">73 episodios - 57 min</li>
-                    <li class="descripcion_abajo">Nueve familias nobles luchan por el control de las tierras de Poniente, mientras que un antiguo enemigo regresa después de estar inactivo durante milenios.</li>
-                    <li class="descripcion_abajo">Reparto: Emilia Clarke - Kit Harington - Peter Dinklage</li>
-                    <li class="descripcion_abajo">
-                        <a href="./detalle_genero.html" class="link_botones_generos">Acción</a>
-                        <a href="./detalle_genero.html" class="link_botones_generos">Drama</a>
-                        <a href="./detalle_genero.html" class="link_botones_generos">Fantasía</a>
-                    </li>
-                    <li class="descripcion_abajo"> 
-                        <a href="./favoritos.html" class="link_botones_generos">+ Agregar a favoritos</a>
-                    </li>
-                </ul>
+                
+                    <p class="descripcion_abajo" id="duracion"></p>
+                    <p class="descripcion_abajo" id="sinopsis"></p>
+                    <p class="descripcion_abajo">Géneros:</p>
+                    <p class="descripcion_abajo" id="generos_pelicula"></p>
+                    <p class="descripcion_abajo" id="watchProviders"></p>
+                    <p class="descripcion_abajo"> 
+                        <a href="./favoritos.html" class="link_favoritos" id="botonFavoritos">+ Agregar a favoritos</a>
+                    </p>
             </article>
+        </section>
+
+        <p class="link_favoritos" id="botonVerRecomendaciones"></p>
+
+        <h3>Películas similares</h3>
+        <section class="seccionPeliSerie" id="verRecomendaciones">   
         </section>
         
     </main>
