@@ -7,6 +7,7 @@ console.log(idSerie);
 let urlDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
 let urlWatchProviders = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
 let urlGetRecommendations = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+let urlGetVideos = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
 
 
 // Traigo datos de la película y los aplico al DOM
@@ -39,6 +40,42 @@ fetch(urlDetalle).then(function (response) {
     duracion.innerText = `${data.number_of_seasons} temporadas`
     sinopsis.innerText = `${data.overview}`
     generos.innerHTML = `${listaGeneros}`
+    
+}).catch(function (error) {
+    console.log(error);
+})
+
+// Traigo videos y los aplico al DOM
+fetch(urlGetVideos).then(function (response) {
+    return response.json()
+}).then(function (data) {
+    let arrayVideos = data.results;
+    
+    console.log(data.results);
+    
+
+    // //1 Capturo el elemento html en donde quiero hacer una modificación
+    let videoRecomendado = document.querySelector('#videoRecomendado')
+    let linkAVideo = document.querySelector('#linkAVideo')
+
+ 
+    // //Con toda la estructura html completa ahora la paso al DOM
+    
+        for (let i = 0; i < arrayVideos.length; i++) {
+            let nombre = arrayVideos[i].name
+            if (nombre.indexOf('Trailer') != -1 || nombre.indexOf('trailer') != -1) { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
+                let objLitVideo = arrayVideos[i]
+                videoRecomendado.innerHTML = `Trailer: ${objLitVideo.name}`
+                linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${objLitVideo.key}" class="link_botones_generos">Ver en YouTube</a>`
+                break
+            } else {
+                videoRecomendado.innerText = `No hay trailers disponibles. Video Recomendado: ${arrayVideos[0].name}`
+                linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${arrayVideos[0].key}" class="link_botones_generos">Ver en YouTube</a>`
+            }
+
+        }              
+
+    // watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
     
 }).catch(function (error) {
     console.log(error);
