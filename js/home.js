@@ -48,7 +48,7 @@ fetch(urlSeriesPopulares).then(function (response) {
         seriesPopus += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDeSeriesPopulares[i].name}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeSeriesPopulares[i].poster_path}'  alt="Titanic" class="tapapelicula">
-                                <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
+                                <a href="./detalle_series.html?id=${arrayDeSeriesPopulares[i].id}" class="linkadetalle">Ver más</a>
                             </article>`
     }
     //Con toda la estructura html completa ahora la paso al DOM
@@ -76,7 +76,7 @@ fetch(urlMasVistoSeries).then(function (response) {
         seriesMasVistas1 += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayDeSeriesMasVistas[i].name}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeSeriesMasVistas[i].poster_path}'  alt=${arrayDeSeriesMasVistas[i].name} class="tapapelicula">
-                                <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
+                                <a href="./detalle_series.html?id=${arrayDeSeriesMasVistas[i].id}" class="linkadetalle">Ver más</a>
                             </article>`
     }
     //Con toda la estructura html completa ahora la paso al DOM

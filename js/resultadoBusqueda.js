@@ -69,7 +69,7 @@ fetch(busquedaSeries)
             resultadosApi += `<article class="peliOSerie">
                                     <p class="nombrePeliOSerie">${arrayDeBusquedaSeries[i].name}</p>
                                     <img src='${foto}'  alt="img" class="tapapelicula">
-                                    <a href="./detalle_series.html" class="linkadetalle">Ver más</a>
+                                    <a href="./detalle_series.html?id=${arrayDeBusquedaSeries[i].id}" class="linkadetalle">Ver más</a>
                                 </article>`
         }
     }else{
