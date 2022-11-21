@@ -335,6 +335,18 @@ footer{
     justify-self: flex-end;
 }
 
+.reviews{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-around;
+    background-color: #1c1c1c88;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    align-self: center;
+}
+
 .lista_abajo{
     display: flex;
     flex-direction: column;

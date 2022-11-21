@@ -8,6 +8,7 @@ let urlDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=81faef6942a
 let urlWatchProviders = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
 let urlGetRecommendations = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
 let urlGetVideos = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
+let urlGetReviews = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
 
 
 // Traigo datos de la película y los aplico al DOM
@@ -162,6 +163,35 @@ botonRecomendaciones.addEventListener('click', function (e) {
     }
 })
 
+// Traigo reviews y los aplico al DOM
+fetch(urlGetReviews).then(function (response) {
+    return response.json()
+}).then(function (data) {
+    //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
+    let arrayReviews = data.results
+    console.log(arrayReviews);
+
+    //1 Capturo el elemento html en donde quiero hacer una modificación
+    let reviews = document.querySelector('.reviews')
+    let reseñas = ``
+
+    if (arrayReviews.length <= 3 || arrayReviews == undefined) {
+        for (let i = 0; i < arrayReviews.length; i++) {
+            reseñas += `<article class="descripcion_abajo">- ${arrayReviews[i].author}:<br> ${arrayReviews[i].content}</article>`;
+            
+        }
+    } else {
+        for (let i = 0; i < 3; i++) {
+            reseñas += `<article class="descripcion_abajo">- ${arrayReviews[i].author}:<br> ${arrayReviews[i].content}</article>`;
+        }
+    }
+    //Con toda la estructura html completa ahora la paso al DOM
+    reviews.innerHTML = reseñas
+
+
+}).catch(function (error) {
+    console.log(error);
+})
 
 /* Array que se rellena en favoritos */
 let favoritosSeries = [];
