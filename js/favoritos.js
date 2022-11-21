@@ -58,7 +58,7 @@ if (favoritosSeries == null || favoritosSeries.length == 0) {
                 arraySeriesFavoritas += `<article class="peliOSerie">
                                             <p class="nombrePeliOSerie">${data.name}</p>
                                             <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'  alt="" class="tapapelicula">
-                                            <a href="./detalle_peliculas.html?id=${data.id}" class="linkadetalle">Ver más</a>
+                                            <a href="./detalle_series.html?id=${data.id}" class="linkadetalle">Ver más</a>
                                         </article>`
             seriesFavoritas.innerHTML = arraySeriesFavoritas;
 
