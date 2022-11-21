@@ -75,13 +75,13 @@ fetch(urlGetVideos).then(function (response) {
     return response.json()
 }).then(function (data) {
     let arrayVideos = data.results;
-
-    console.log(data.results);
+    console.log(arrayVideos);
 
 
     // //1 Capturo el elemento html en donde quiero hacer una modificación
     let videoRecomendado = document.querySelector('#videoRecomendado')
     let linkAVideo = document.querySelector('#linkAVideo')
+    let masVideos = document.querySelector('#masVideos')
 
 
     // //Con toda la estructura html completa ahora la paso al DOM
@@ -100,7 +100,16 @@ fetch(urlGetVideos).then(function (response) {
 
     }
 
-    // watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
+    let listadoDeVideos = ``
+    if (arrayVideos.length > 2) {
+        for (let i = 0; i < arrayVideos.length; i++) {
+            listadoDeVideos += `<a href="https://www.youtube.com/watch?v=${arrayVideos[i].key}" class="link_botones_generos">${arrayVideos[i].name}</a>`
+        }
+        masVideos.innerHTML = listadoDeVideos
+    } else {
+        masVideos.innerHTML = '<p class="descripcion_abajo">No hay videos adicionales disponibles.</p>'
+    }
+
 
 }).catch(function (error) {
     console.log(error);
@@ -168,13 +177,13 @@ fetch(urlGetReviews).then(function (response) {
     console.log(arrayReviews);
 
     //1 Capturo el elemento html en donde quiero hacer una modificación
-    let reviews = document.querySelector('.reviews')
+    let reviews = document.querySelector('#reviews')
     let reseñas = ``
 
     if (arrayReviews.length <= 3 || arrayReviews == undefined) {
         for (let i = 0; i < arrayReviews.length; i++) {
             reseñas += `<article class="descripcion_abajo">- ${arrayReviews[i].author}:<br> ${arrayReviews[i].content}</article>`;
-            
+
         }
     } else {
         for (let i = 0; i < 3; i++) {
@@ -183,6 +192,10 @@ fetch(urlGetReviews).then(function (response) {
     }
     //Con toda la estructura html completa ahora la paso al DOM
     reviews.innerHTML = reseñas
+
+    if (arrayReviews == undefined || arrayReviews.length == 0) {
+        reviews.innerHTML = '<p class="descripcion_abajo">No hay reseñas.</p>'
+    }
 
 
 }).catch(function (error) {

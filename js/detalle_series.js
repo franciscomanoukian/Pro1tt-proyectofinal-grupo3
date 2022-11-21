@@ -31,17 +31,17 @@ fetch(urlDetalle).then(function (response) {
     listaGeneros = ''
     generosTodos = data.genres
     for (let i = 0; i < generosTodos.length; i++) {
-       listaGeneros+=`<a href="./detalle_genero.html?id_genero=${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
+        listaGeneros += `<a href="./detalle_genero.html?id_genero=${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
     }
 
     //Con toda la estructura html completa ahora la paso al DOM
     titulo.innerText = `${data.name}`;
     anioRating.innerText = `${data.first_air_date} - ⭐ ${data.vote_average}`
-    fotoPortada.innerHTML = ` <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'  alt="${data.title}" class="poster">` 
+    fotoPortada.innerHTML = ` <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'  alt="${data.title}" class="poster">`
     duracion.innerText = `${data.number_of_seasons} temporadas`
     sinopsis.innerText = `${data.overview}`
     generos.innerHTML = `${listaGeneros}`
-    
+
 }).catch(function (error) {
     console.log(error);
 })
@@ -51,33 +51,43 @@ fetch(urlGetVideos).then(function (response) {
     return response.json()
 }).then(function (data) {
     let arrayVideos = data.results;
-    
+
     console.log(data.results);
-    
+
 
     // //1 Capturo el elemento html en donde quiero hacer una modificación
     let videoRecomendado = document.querySelector('#videoRecomendado')
     let linkAVideo = document.querySelector('#linkAVideo')
+    let masVideos = document.querySelector('#masVideos')
 
- 
+
     // //Con toda la estructura html completa ahora la paso al DOM
-    
+
+    for (let i = 0; i < arrayVideos.length; i++) {
+        let nombre = arrayVideos[i].name
+        if (nombre.indexOf('Trailer') != -1 || nombre.indexOf('trailer') != -1) { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
+            let objLitVideo = arrayVideos[i]
+            videoRecomendado.innerHTML = `Trailer: ${objLitVideo.name}`
+            linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${objLitVideo.key}" class="link_botones_generos">Ver en YouTube</a>`
+            break
+        } else {
+            videoRecomendado.innerText = `No hay trailers disponibles. Video Recomendado: ${arrayVideos[0].name}`
+            linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${arrayVideos[0].key}" class="link_botones_generos">Ver en YouTube</a>`
+        }
+
+    }
+
+    let listadoDeVideos = ``
+    if (arrayVideos.length > 2) {
         for (let i = 0; i < arrayVideos.length; i++) {
-            let nombre = arrayVideos[i].name
-            if (nombre.indexOf('Trailer') != -1 || nombre.indexOf('trailer') != -1) { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
-                let objLitVideo = arrayVideos[i]
-                videoRecomendado.innerHTML = `Trailer: ${objLitVideo.name}`
-                linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${objLitVideo.key}" class="link_botones_generos">Ver en YouTube</a>`
-                break
-            } else {
-                videoRecomendado.innerText = `No hay trailers disponibles. Video Recomendado: ${arrayVideos[0].name}`
-                linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${arrayVideos[0].key}" class="link_botones_generos">Ver en YouTube</a>`
-            }
+            listadoDeVideos += `<a href="https://www.youtube.com/watch?v=${arrayVideos[i].key}" class="link_botones_generos">${arrayVideos[i].name}</a>`
+        }
+        masVideos.innerHTML = listadoDeVideos
+    } else {
+        masVideos.innerHTML = '<p class="descripcion_abajo">No hay videos adicionales disponibles.</p>'
+    }
 
-        }              
 
-    // watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
-    
 }).catch(function (error) {
     console.log(error);
 })
@@ -93,19 +103,19 @@ fetch(urlWatchProviders).then(function (response) {
     //1 Capturo el elemento html en donde quiero hacer una modificación
     let watchProviders = document.querySelector('#watchProviders')
 
- 
+
     //Con toda la estructura html completa ahora la paso al DOM
-    
+
     if (objLitProviders.MX != undefined) {
         let prove = objLitProviders.MX.buy[0];
         watchProviders.innerHTML = `<p class="prove">Dónde ver: ${prove.provider_name}</p>
                                     <img class="proveImg" src="https://image.tmdb.org/t/p/w500/${prove.logo_path}">`
     }
-        
-    
+
+
 
     watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
-    
+
 }).catch(function (error) {
     console.log(error);
 })
@@ -124,7 +134,7 @@ fetch(urlGetRecommendations).then(function (response) {
     let recomendadas = ''
 
     //2 Recorro la información de la api y la organizo para mostarla en el html
-    for(let i=0; i<5; i++){
+    for (let i = 0; i < 5; i++) {
         //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
         recomendadas += `<article class="peliOSerie">
                                 <p class="nombrePeliOSerie">${arrayRecomendadas[i].name}</p>
@@ -134,7 +144,7 @@ fetch(urlGetRecommendations).then(function (response) {
     }
     //Con toda la estructura html completa ahora la paso al DOM
     verRecomendaciones.innerHTML = recomendadas;
-    
+
 }).catch(function (error) {
     console.log(error);
 })
@@ -178,7 +188,7 @@ fetch(urlGetReviews).then(function (response) {
     if (arrayReviews.length <= 3 || arrayReviews == undefined) {
         for (let i = 0; i < arrayReviews.length; i++) {
             reseñas += `<article class="descripcion_abajo">- ${arrayReviews[i].author}:<br> ${arrayReviews[i].content}</article>`;
-            
+
         }
     } else {
         for (let i = 0; i < 3; i++) {
@@ -188,6 +198,9 @@ fetch(urlGetReviews).then(function (response) {
     //Con toda la estructura html completa ahora la paso al DOM
     reviews.innerHTML = reseñas
 
+    if (arrayReviews == undefined || arrayReviews.length == 0) {
+        reviews.innerHTML = '<p class="descripcion_abajo">No hay reseñas.</p>'
+    }
 
 }).catch(function (error) {
     console.log(error);
@@ -199,28 +212,28 @@ let favoritosSeries = [];
 /* recuperamos el storage */
 let recuperoStorage = localStorage.getItem('favoritosSeries');
 
-if(recuperoStorage != null){
+if (recuperoStorage != null) {
     favoritosSeries = JSON.parse(recuperoStorage);
 };
 
 /* Validar si este id existe en el favoritos (localsStorage) */
 if (favoritosSeries.includes(idSerie)) {
-    botonFavoritosSeries.innerText="- Quitar de Favorito";
+    botonFavoritosSeries.innerText = "- Quitar de Favorito";
 }
 
 /* Agregarle un evento al boton de agregar a favorito */
-botonFavoritosSeries.addEventListener("click",function (e) {
+botonFavoritosSeries.addEventListener("click", function (e) {
     e.preventDefault()
-    
+
     /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
-    if(favoritosSeries.includes(idSerie)){
+    if (favoritosSeries.includes(idSerie)) {
         let indice = favoritosSeries.indexOf(idSerie);
-        favoritosSeries.splice(indice,1);
-        botonFavoritosSeries.innerText="+ Agregar a Favorito";
-    }else{
-    /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
+        favoritosSeries.splice(indice, 1);
+        botonFavoritosSeries.innerText = "+ Agregar a Favorito";
+    } else {
+        /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
         favoritosSeries.push(idSerie);
-        botonFavoritosSeries.innerText="- Quitar de Favorito";
+        botonFavoritosSeries.innerText = "- Quitar de Favorito";
     }
 
     /* Si lo incluye o no, quiero poder subir el array al localStorage ->
@@ -228,6 +241,6 @@ botonFavoritosSeries.addEventListener("click",function (e) {
     let favToString = JSON.stringify(favoritosSeries);
 
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
-    localStorage.setItem('favoritosSeries',favToString)
-    
+    localStorage.setItem('favoritosSeries', favToString)
+
 });
