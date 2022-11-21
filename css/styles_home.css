@@ -347,6 +347,20 @@ footer{
     align-self: center;
 }
 
+.linksAVideos{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: flex-start;
+    background-color: #1c1c1c88;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    align-self: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
 .lista_abajo{
     display: flex;
     flex-direction: column;
@@ -374,6 +388,7 @@ footer{
     padding: 6px;
     margin-right: 10px;
     margin-bottom: 10px;
+    width: fit-content;
 }
 
 .link_favoritos{
