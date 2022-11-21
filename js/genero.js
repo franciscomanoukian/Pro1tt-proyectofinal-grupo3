@@ -13,7 +13,7 @@ fetch(urlGenerosPeliculas).then(function (response) {
     let generosPelis = ''
 // Iniciamos un contador en 0, y mientras sea menor a la longitud del array, le agregamos a generosPelis las clases///////////////////////////////////////////////////////
     for (let i = 0; i < 4; i++) {
-        generosPelis += `<li class="liDeLista"><a href="./detalle_genero.html?id_genero=${listaDeGeneros[i].id}" class="linkadetalleGenero">${listaDeGeneros[i].name}</a></li>`
+        generosPelis += `<li class="liDeLista"><a href="./detalle_genero.html?id_genero_pelis=${listaDeGeneros[i].id}" class="linkadetalleGenero">${listaDeGeneros[i].name}</a></li>`
     
     }
 // Metemos los cambios de generosPelis a generosPeliculas.innerHTML///////////////////////////////////////////////////////
@@ -36,7 +36,7 @@ fetch(urlGenerosSeries).then(function (response) {
     let generosdeSeries = ''
 // ///////////////////////////////////////////////////////
     for (let i = 0; i < 4; i++) {
-        generosdeSeries += `<li class="liDeLista"><a href="./detalle_genero.html?id_genero=${listaDeGenerosSeries[i].id}" class="linkadetalleGenero">${listaDeGenerosSeries[i].name}</a></li>`
+        generosdeSeries += `<li class="liDeLista"><a href="./detalle_genero.html?id_genero_series=${listaDeGenerosSeries[i].id}" class="linkadetalleGenero">${listaDeGenerosSeries[i].name}</a></li>`
     
     }
 // ///////////////////////////////////////////////////////
