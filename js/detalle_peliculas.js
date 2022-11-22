@@ -213,7 +213,7 @@ if (recuperoStorage != null) {
 
 /* Validar si este id existe en el favoritos (localsStorage) */
 if (favoritosPelis.includes(idPeli)) {
-    botonFavoritosPelis.innerText = "- Quitar de Favorito";
+    botonFavoritosPelis.innerText = "- Quitar de Favoritos";
 }
 
 /* Agregarle un evento al boton de agregar a favorito */
@@ -224,7 +224,7 @@ botonFavoritosPelis.addEventListener("click", function (e) {
     if (favoritosPelis.includes(idPeli)) {
         let indice = favoritosPelis.indexOf(idPeli);
         favoritosPelis.splice(indice, 1);
-        botonFavoritosPelis.innerText = "+ Agregar a Favorito";
+        botonFavoritosPelis.innerText = "+ Agregar a Favoritos";
     } else {
         /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
         favoritosPelis.push(idPeli);
