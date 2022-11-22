@@ -64,8 +64,7 @@ fetch(urlGetVideos).then(function (response) {
     // //Con toda la estructura html completa ahora la paso al DOM
 
     for (let i = 0; i < arrayVideos.length; i++) {
-        let nombre = arrayVideos[i].name
-        if (nombre.indexOf('Trailer') != -1 || nombre.indexOf('trailer') != -1) { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
+        if (arrayVideos[i].type == 'Trailer') { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
             let objLitVideo = arrayVideos[i]
             videoRecomendado.innerHTML = `Trailer: ${objLitVideo.name}`
             linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${objLitVideo.key}" class="link_botones_generos">Ver en YouTube</a>`
@@ -111,10 +110,6 @@ fetch(urlWatchProviders).then(function (response) {
         watchProviders.innerHTML = `<p class="prove">Dónde ver: ${prove.provider_name}</p>
                                     <img class="proveImg" src="https://image.tmdb.org/t/p/w500/${prove.logo_path}">`
     }
-
-
-
-    watchProviders.innerHTML = `AGREGAR LOGOS Y LINK Dónde ver: ${nombreProvider}`
 
 }).catch(function (error) {
     console.log(error);

@@ -87,8 +87,7 @@ fetch(urlGetVideos).then(function (response) {
     // //Con toda la estructura html completa ahora la paso al DOM
 
     for (let i = 0; i < arrayVideos.length; i++) {
-        let nombre = arrayVideos[i].name
-        if (nombre.indexOf('Trailer') != -1 || nombre.indexOf('trailer') != -1) { // Buscamos un video que contenga la palabra 'trailer' en el array de videos recomendados
+        if (arrayVideos[i].type == 'Trailer') { 
             let objLitVideo = arrayVideos[i]
             videoRecomendado.innerHTML = `Trailer: ${objLitVideo.name}`
             linkAVideo.innerHTML = `<a href="https://www.youtube.com/watch?v=${objLitVideo.key}" class="link_botones_generos">Ver en YouTube</a>`
