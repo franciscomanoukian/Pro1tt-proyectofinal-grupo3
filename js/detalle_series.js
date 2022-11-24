@@ -4,11 +4,11 @@ let qsObjLit = new URLSearchParams(qs);
 let idSerie = qsObjLit.get('id')
 console.log(idSerie);
 
-let urlDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
-let urlWatchProviders = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
-let urlGetRecommendations = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
-let urlGetVideos = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
-let urlGetReviews = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+let urlDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US`
+let urlWatchProviders = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=fd6a4e605ab941f2a77d6e640f54a48d`
+let urlGetRecommendations = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1`
+let urlGetVideos = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US`
+let urlGetReviews = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1`
 
 
 // Traigo datos de la película y los aplico al DOM

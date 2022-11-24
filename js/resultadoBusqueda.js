@@ -2,9 +2,9 @@ let qs = location.search;
 let qsObjLit = new URLSearchParams(qs)
 let buscar = qsObjLit.get('buscar')
 
-let busquedaPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&query=${buscar}&page=1&include_adult=false`
+let busquedaPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&query=${buscar}&page=1&include_adult=false`
 
-let busquedaSeries = `https://api.themoviedb.org/3/search/tv?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1&query=${buscar}&include_adult=false`
+let busquedaSeries = `https://api.themoviedb.org/3/search/tv?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1&query=${buscar}&include_adult=false`
 
 let haBuscado = document.querySelector('.haBuscado');
     haBuscado.innerText = buscar;

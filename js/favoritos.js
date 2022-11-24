@@ -25,7 +25,7 @@ if (favoritosPelis == null || favoritosPelis.length == 0) {
     pelisFavoritas.innerHTML = '<p>No hay películas en favoritos</p>'
 } else {
     for (let i = 0; i < favoritosPelis.length && i < 5; i++) {
-        let apiPeliculas = `https://api.themoviedb.org/3/movie/${favoritosPelis[i]}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
+        let apiPeliculas = `https://api.themoviedb.org/3/movie/${favoritosPelis[i]}?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US`
         fetch(apiPeliculas)
             .then(function (response) {
                 return response.json();
@@ -49,7 +49,7 @@ if (favoritosSeries == null || favoritosSeries.length == 0) {
     seriesFavoritas.innerHTML = '<p>No hay series en favoritos</p>'
 } else {
     for (let i = 0; i < favoritosSeries.length && i < 5; i++) {   
-        let apiSeries = `https://api.themoviedb.org/3/tv/${favoritosSeries[i]}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+        let apiSeries = `https://api.themoviedb.org/3/tv/${favoritosSeries[i]}?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1`
         fetch(apiSeries)
             .then(function (response) {
                 return response.json();

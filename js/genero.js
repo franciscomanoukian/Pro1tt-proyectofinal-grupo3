@@ -1,5 +1,5 @@
-let urlGenerosPeliculas = 'https://api.themoviedb.org/3/genre/movie/list?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US'
-let urlGenerosSeries = 'https://api.themoviedb.org/3/genre/tv/list?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US'
+let urlGenerosPeliculas = 'https://api.themoviedb.org/3/genre/movie/list?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US'
+let urlGenerosSeries = 'https://api.themoviedb.org/3/genre/tv/list?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US'
 
 // Fetch y agregamos Generos de peliculas ///////////////////////////////////////////////////////
 fetch(urlGenerosPeliculas).then(function (response) {

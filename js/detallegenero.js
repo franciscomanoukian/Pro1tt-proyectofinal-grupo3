@@ -6,8 +6,8 @@ let idPeli = qsObjLit.get('id_genero_pelis')
 
 let idSeries = qsObjLit.get('id_genero_series')
 
-let urlDetalleGeneroPeliculas = `https://api.themoviedb.org/3/discover/movie?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idPeli}&with_watch_monetization_types=flatrate`
-let urlDetalleGeneroSeries = `https://api.themoviedb.org/3/discover/tv?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=${idSeries}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+let urlDetalleGeneroPeliculas = `https://api.themoviedb.org/3/discover/movie?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idPeli}&with_watch_monetization_types=flatrate`
+let urlDetalleGeneroSeries = `https://api.themoviedb.org/3/discover/tv?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=${idSeries}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
 
 let tituloGenero = document.querySelector('.tituloGenero')
 

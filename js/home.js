@@ -1,6 +1,6 @@
-let urlPelisPopulares = 'https://api.themoviedb.org/3/movie/popular?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1'
-let urlSeriesPopulares = 'https://api.themoviedb.org/3/tv/popular?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1'
-let urlMasVistoSeries = 'https://api.themoviedb.org/3/tv/top_rated?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1'
+let urlPelisPopulares = 'https://api.themoviedb.org/3/movie/popular?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1'
+let urlSeriesPopulares = 'https://api.themoviedb.org/3/tv/popular?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1'
+let urlMasVistoSeries = 'https://api.themoviedb.org/3/tv/top_rated?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1'
 
 // Fetch y agregamos PELICULAS POPULARES ///////////////////////////////////////////////////////
 fetch(urlPelisPopulares).then(function (response) {

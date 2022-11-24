@@ -3,11 +3,11 @@ let qsObjLit = new URLSearchParams(qs);
 
 let idPeli = qsObjLit.get('id')
 
-let urlDetalle = `https://api.themoviedb.org/3/movie/${idPeli}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
-let urlWatchProviders = `https://api.themoviedb.org/3/movie/${idPeli}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
-let urlGetRecommendations = `https://api.themoviedb.org/3/movie/${idPeli}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
-let urlGetVideos = `https://api.themoviedb.org/3/movie/${idPeli}/videos?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
-let urlGetReviews = `https://api.themoviedb.org/3/movie/${idPeli}/reviews?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+let urlDetalle = `https://api.themoviedb.org/3/movie/${idPeli}?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US`
+let urlWatchProviders = `https://api.themoviedb.org/3/movie/${idPeli}/watch/providers?api_key=fd6a4e605ab941f2a77d6e640f54a48d`
+let urlGetRecommendations = `https://api.themoviedb.org/3/movie/${idPeli}/recommendations?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1`
+let urlGetVideos = `https://api.themoviedb.org/3/movie/${idPeli}/videos?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US`
+let urlGetReviews = `https://api.themoviedb.org/3/movie/${idPeli}/reviews?api_key=fd6a4e605ab941f2a77d6e640f54a48d&language=en-US&page=1`
 
 // Traigo datos de la película y los aplico al DOM
 fetch(urlDetalle).then(function (response) {
@@ -237,5 +237,4 @@ botonFavoritosPelis.addEventListener("click", function (e) {
 
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
     localStorage.setItem('favoritosPelis', favToString)
-
 });
